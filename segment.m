@@ -1,4 +1,4 @@
-function [segmented_img] = segment_red(img)
+function [segmented_img] = segment(img)
 %SEGMENT_RED Color senstive segmentation
 %   PROBLEM: VERY SENSTIVE TO COLOR!!!
 
