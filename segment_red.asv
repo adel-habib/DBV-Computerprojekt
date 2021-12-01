@@ -1,7 +1,0 @@
-function [outputArg1,outputArg2] = segment_red(inputArg1,inputArg2)
-%SEGMENT_RED Color senstive segmentation
-%   PROBLEM: Doesn't work for 
-outputArg1 = inputArg1;
-outputArg2 = inputArg2;
-end
-
