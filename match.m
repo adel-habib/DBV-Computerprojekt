@@ -1,17 +1,44 @@
-function [matched_array,euler,aspect_ration] = match(digit)
+function [guess,confidence] = match(digit)
 %MATCH Matches digits to tempelates using normalised sum of differences
 % inputs:
 %   digit  : A binary image of single digit 
 % outputs:
 %   matched_array           : Array of confidence 
-%   euler                   : Euler number of digit
-%   aspect_ration           : Aspect ration of the digit
 
+
+    aspect_ratio            = size(digit,2)/size(digit,1);
+    euler                   = bweuler(digit);
     
-    matches = ones(10,1);
-    for im  = 1:10
+    if aspect_ratio < 0.4
+        guess      = 1;
+        confidence = 1;
+        return
+    end
+    
+    if euler == -1
+        guess = 8;
+        confidence = 1;
+        return
+    end
+    
+    group_1 = [2 3 5 7];
+    group_2 = [0 4 6 9];
+    all     = (0:1:9);
+    
+    
+    
+    if euler == 1
+        candidates = group_1;
+    elseif euler == 0
+        candidates = group_2;
+    else
+        candidates = all;
+    end
+    
+    matches = ones(size(candidates));
+    for im  = 1: length(candidates)
            sd               = 0; % sum of differences 
-           path             = num2str(im-1) + ".png";
+           path             = num2str(candidates(im)) + ".png";
            tempelate        = imread(path);
            [width, height]   = size(tempelate);
            normalised_digit = imresize(digit,[width height]);
@@ -25,12 +52,10 @@ function [matched_array,euler,aspect_ration] = match(digit)
        
        normalised_sd        = 1 - (sd / (width * height));
        matches(im)          = normalised_sd;
-       
     end
     
-    aspect_ration           = size(digit,2)/size(digit,1);
-    euler                   = bweuler(digit);
-    matched_array           = matches;
     
+    [confidence , guess_ind] = max(matches);
+    guess = candidates(guess_ind);
 end
 
