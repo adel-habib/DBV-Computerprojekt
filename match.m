@@ -21,8 +21,8 @@ function [guess,confidence] = match(digit)
         return
     end
     
-    group_1 = [2 3 5 7];
-    group_2 = [0 4 6 9];
+    group_1 = [2 3 4 5 7];
+    group_2 = [0 6 9];
     all     = (0:1:9);
     
     
@@ -52,9 +52,9 @@ function [guess,confidence] = match(digit)
        
        normalised_sd        = 1 - (sd / (width * height));
        matches(im)          = normalised_sd;
+       
     end
-    
-    
+
     [confidence , guess_ind] = max(matches);
     guess = candidates(guess_ind);
 end
