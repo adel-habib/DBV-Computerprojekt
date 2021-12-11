@@ -2,10 +2,11 @@
 clc;
 clear;
 addpath("images")
+addpath("lib")
 addpath("images/tempelates")
 format long
 
-img = imread('7seg_6d.jpg');
+img = imread('im1.png');
 img = compartment(img);
 img = isolate_digits(img);
 img = snip(img);

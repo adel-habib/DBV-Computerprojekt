@@ -6,7 +6,7 @@ function [segmented_img] = compartment(img)
        img (:,:,3) uint8 % input image must contain the 3 channels
     end
 
-    SE_SIZE         =    8;
+    SE_SIZE         =    6;
     SE_SHAPE        =    "square";
 
     [r,g,b]         =    imsplit(img);
