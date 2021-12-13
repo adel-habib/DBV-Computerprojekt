@@ -1,10 +1,9 @@
-
-clc;
-clear;
 addpath("images")
-addpath("lib")
 addpath("images/tempelates")
-format long
+addpath("lib")
 
-img = imread('im1.png');
-imshow(img)
+im = imread("im5.png");
+
+im = compartment(im);
+% im = isolate_digits(im);
+imshow(im)
