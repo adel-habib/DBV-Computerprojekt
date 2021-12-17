@@ -1,11 +1,11 @@
 # Digitaler Bildverarbeitung Computerprojekt
 # Digital Image processing | Project
 
-Final project for the module Digital Image processing. The goal of the project is to utilize the principals of digital image processing and morphology to perform simple optical charachter recognition on 7 segment display. 
+Final project for the module Digital Image processing. The goal of the project is to utilize the principles of digital image processing and morphology to perform simple optical character recognition on 7 segment display.
 
-Images of 7 segment display in varying conditions and times have been taken. the Matlab script can guesses the timestamp displayed as well as estimate the confidence of the guess. 
+Images of 7 segment display in varying conditions and times have been taken. The Matlab script can guess the timestamp displayed, as well as estimate the confidence of the guess.
 
-In order to reproduce the pictures or generate test data, The module 7segment_display contains HTML / CSS / JS files that can be used to mimic a digital clock 
+In order to reproduce the pictures or generate test data, The module 7segment_display contains HTML / CSS / JS files that can be used to mimic a digital clock
 
 ### 1- Run the HTML file on your localhost
 
