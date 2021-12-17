@@ -1,9 +1,7 @@
 addpath("images")
 addpath("images/tempelates")
 addpath("lib")
-
-im = imread("im5.png");
-
-im = compartment(im);
-% im = isolate_digits(im);
+path = "im3.png";
+im = imread(path);
+[conf, time] = read_display(path);
 imshow(im)

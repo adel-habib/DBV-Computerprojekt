@@ -25,7 +25,7 @@ body {
 	right: -20px;
 	width: 5px;
 	height: 5px;
-	background-color: rgb(0, 100, 200);
+	background-color: rgb(255, 0, 255);
 }
 .digital-watch .hour::before,
 .digital-watch .minute::before {
@@ -101,5 +101,5 @@ body {
 .digital-watch svg.num-0 .d,
 .digital-watch svg.num-0 .e,
 .digital-watch svg.num-0 .f {
-	fill: rgb(0, 0, 255);
+	fill: rgb(255, 0, 255);
 }
