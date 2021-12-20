@@ -6,10 +6,9 @@ function digit = get_digit(binaryImage,N)
 % outputs:
 %   digit        : a normalised binary image of a single digit
 
-CC = bwconncomp(binaryImage);
-stats = regionprops(CC,'basic');
-
-    digit_row =  imcrop(binaryImage,stats(N).BoundingBox);
-    digit = imresize(digit_row, [NaN 32]);
+    CC          = bwconncomp(binaryImage);
+    stats       = regionprops(CC,'basic');
+    digit_row   =  imcrop(binaryImage,stats(N).BoundingBox);
+    digit       = imresize(digit_row, [NaN 32]);
 end
 

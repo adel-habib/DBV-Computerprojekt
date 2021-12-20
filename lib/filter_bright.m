@@ -1,16 +1,20 @@
 function maskedRGBImage = filter_bright(RGB)
 %filter_bright Removes unwanted bright areas of an RGB Image 
 
+arguments
+       RGB (:,:,3) uint8 % input image must contain the 3 channels
+end
+
 
 I = rgb2hsv(RGB);
 
 channel1Min = 0.241;
 channel1Max = 1.000;
 
-channel2Min = 0.721;
+channel2Min = 0.63;
 channel2Max = 1.000;
 
-channel3Min = 0.721;
+channel3Min = 0.7;
 channel3Max = 1.000;
 
 sliderBW = (I(:,:,1) >= channel1Min ) & (I(:,:,1) <= channel1Max) & ...

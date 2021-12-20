@@ -5,7 +5,6 @@ function [guess,confidence] = match(digit)
 % outputs:
 %   matched_array           : Array of confidence 
 
-
     aspect_ratio            = size(digit,2)/size(digit,1);
     euler                   = bweuler(digit);
     
@@ -54,8 +53,8 @@ function [guess,confidence] = match(digit)
        matches(im)          = normalised_sd;
        
     end
-
     [confidence , guess_ind] = max(matches);
+    
     guess = candidates(guess_ind);
 end
 

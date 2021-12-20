@@ -1,22 +1,22 @@
 function [resized_RGB] = read_image(path)
-%READ_IMAGE Summary of this function goes here
-%   Detailed explanation goes here
-    % Check if file exists.
+%READ_IMAGE reads an image given its handle / path
+
     if ~exist(path, 'file')
         errorMessage = sprintf('Error: %s does not exist in the search path folders.', path);
-        uiwait(warndlg(errorMessage));
+        uiwait(errordlg(errorMessage));
         return;
     end
     img = imread(path);
-    [rows, cols, channels] = size(img);
+    [~, cols, channels] = size(img);
     if channels ~= 3
         errorMessage = sprintf('Error: %s isnt an RGB image.', path);
-        uiwait(warndlg(errorMessage));
+        uiwait(errordlg(errorMessage));
         return;
     end
     
-    if cols > 600
-       img = imresize(img,[NaN 600]);
+    MAX_COLS = 600;
+    if cols > MAX_COLS
+       img = imresize(img,[NaN MAX_COLS]);
     end
     
     resized_RGB = img;
