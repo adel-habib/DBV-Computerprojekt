@@ -6,8 +6,12 @@ Final project for the module Digital Image processing. The goal of the project i
 Images of 7 segment display in varying conditions and times have been taken. The Matlab script can guess the timestamp displayed, as well as estimate the confidence of the guess.
 
 In order to reproduce the pictures or generate test data, The module 7segment_display contains HTML / CSS / JS files that can be used to mimic a digital clock
+## Example
 
-![image](https://drive.google.com/uc?export=view&id=1AMuOtIBFbDgQAMLHeophIuE3BpKihxv7)
+<p align="center">
+  <img src="https://drive.google.com/uc?export=view&id=1AMuOtIBFbDgQAMLHeophIuE3BpKihxv7">
+</p>
+
 ### 1- Run the HTML file on your localhost
 
 ```console
