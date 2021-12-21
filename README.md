@@ -7,7 +7,7 @@ Images of 7 segment display in varying conditions and times have been taken. The
 
 In order to reproduce the pictures or generate test data, The module 7segment_display contains HTML / CSS / JS files that can be used to mimic a digital clock
 
-![alt text](https://drive.google.com/file/d/1AMuOtIBFbDgQAMLHeophIuE3BpKihxv7/view?usp=sharing)
+![image](https://drive.google.com/file/d/1AMuOtIBFbDgQAMLHeophIuE3BpKihxv7/view?usp=sharing)
 ### 1- Run the HTML file on your localhost
 
 ```console
