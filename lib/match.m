@@ -1,9 +1,15 @@
 function [guess,confidence] = match(digit)
-%MATCH Matches digits to tempelates using normalised sum of differences
+%MATCH Matches digits to tempelates using normalised sum of differences,
+%aspect ration and euler number. 
 % inputs:
 %   digit  : A binary image of single digit 
 % outputs:
-%   matched_array           : Array of confidence 
+%   guess       : guessed number      
+%   confidence  : confidence of the guess 
+
+    arguments
+       digit (:,:) logical 
+    end
 
     aspect_ratio            = size(digit,2)/size(digit,1);
     euler                   = bweuler(digit);

@@ -1,7 +1,13 @@
 function [blobs] = isolate_digits(img,n)
-    %ISOLATE_DIGITS isolates and returns the digits of 7 segment display from the image 
-    %   Using the regionprops properties the digits are located and isolated
-    %   into a new binary image
+%ISOLATE_DIGITS isolates and returns the digits of 7 segment display from the image 
+%   Using the regionprops properties the digits are located and isolated
+%   into a new binary image
+%   Inputs:
+%       img     : logical image 
+%       n       : number of digits DEFAULT value is 6
+%   Outputs:
+%       blobs   : a binary image contatining (if segmentation is correct)
+%       the n digits of the display
 
     arguments
         img (:,:) logical

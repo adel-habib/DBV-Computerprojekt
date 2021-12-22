@@ -1,5 +1,6 @@
 function digit = get_digit(binaryImage,N)
-%GET_DIGITS returns a normalised binary image of a single digit
+%GET_DIGITS returns a normalised binary image of a single digit using
+%connected components and regionprops 
 % inputs:
 %   binaryImage  : A binary image 
 %   N            : Index of the digit (Left to the right HH:MM:SS)

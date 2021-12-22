@@ -1,5 +1,5 @@
 function snipped_image = snip(binary_image)
-%SNIP Crops a binary image of the dispay into the bounding box of the
+%SNIP Crops a binary image of the display into the bounding box of the
 %digits. Slices the image into rows and cols and find the white edges.  
     if ~islogical(binary_image)
         warnMessage  = sprintf("Warning!, Image passed to snip.m isn't logical! this might lead to unexpected behaviour!");
