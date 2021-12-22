@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3083152203" file="/home/adel/DBV-Computerprojekt/gui/gui.prj" location="/home/adel/DBV-Computerprojekt/gui" name="gui" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3790615625" file="/home/adel/DBV-Computerprojekt/gui/gui.prj" location="/home/adel/DBV-Computerprojekt/gui" name="gui" target="target.mlapps" target-name="Package App">
     <param.appname>gui</param.appname>
     <param.authnamewatermark>Ahmed Habib</param.authnamewatermark>
     <param.email>ahmed.habib@htw-dresden.de</param.email>
@@ -7,12 +7,23 @@
     <param.icon />
     <param.icons />
     <param.summary>Graphical user interface for the digital image processing project to recognise the digits on a 7 segment display</param.summary>
-    <param.description />
-    <param.screenshot>/tmp/tpec3a68e4_25ac_40e2_8f02_f637c39f44ac.png</param.screenshot>
+    <param.description>Final project for the module Digital Image processing. The goal of the project is to utilize the principles of digital image processing and morphology to perform simple optical character recognition on 7 segment display.
+
+Images of 7 segment display in varying conditions and times have been taken. The Matlab script can guess the timestamp displayed, as well as estimate the confidence of the guess.</param.description>
+    <param.screenshot>/tmp/tpc6e073f2_c766_488f_b481_7c5e0c788fdf.png</param.screenshot>
     <param.version>1.0</param.version>
-    <param.products.name />
-    <param.products.id />
-    <param.products.version />
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Image Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>17</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.10</item>
+      <item>11.3</item>
+    </param.products.version>
     <param.platforms />
     <param.output>${PROJECT_ROOT}</param.output>
     <param.guid>017eb7f9-33de-42b5-a589-8d53a8d8a323</param.guid>
@@ -20,11 +31,7 @@
       <param.company />
       <param.icon />
       <param.icons />
-      <param.description />
       <param.version />
-      <param.products.name />
-      <param.products.id />
-      <param.products.version />
       <param.platforms />
       <param.output />
     </unset>
@@ -37,6 +44,7 @@
     </fileset.depfun>
     <fileset.resources>
       <file>/home/adel/DBV-Computerprojekt/images</file>
+      <file>/home/adel/DBV-Computerprojekt/images/tempelates</file>
       <file>/home/adel/DBV-Computerprojekt/lib</file>
     </fileset.resources>
     <fileset.package />
