@@ -14,18 +14,21 @@ function [guess,confidence] = match(digit)
     aspect_ratio            = size(digit,2)/size(digit,1);
     euler                   = bweuler(digit);
     
+    % Special Case for "1"
     if aspect_ratio < 0.4
         guess      = 1;
         confidence = 1;
         return
     end
     
+    % Special Case for "8"
     if euler == -1
         guess = 8;
         confidence = 1;
         return
     end
     
+    % 2 Groups with respect to euler number
     group_1 = [2 3 4 5 7];
     group_2 = [0 6 9];
     all     = (0:1:9);
@@ -41,6 +44,9 @@ function [guess,confidence] = match(digit)
     end
     
     matches = ones(size(candidates));
+    
+    % simplified tempelate matching using the sum of differences
+    % loop over all candidates 
     for im  = 1: length(candidates)
            sd               = 0; % sum of differences 
            path             = num2str(candidates(im)) + ".png";
