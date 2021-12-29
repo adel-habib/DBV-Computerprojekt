@@ -39,7 +39,6 @@ function [blobs] = isolate_digits(img,n)
         msgText = getReport(ERR);
         warning(msgText);
     end
-
-        
+  
 end
 

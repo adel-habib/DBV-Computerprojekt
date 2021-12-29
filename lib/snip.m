@@ -1,10 +1,13 @@
 function snipped_image = snip(binary_image)
-%SNIP Crops a binary image of the display into the bounding box of the
-%digits. Slices the image into rows and cols and find the white edges.  
+%SNIP Crops a binary image into the bounding box of the of its content.
+% Slices the image into rows and cols and finds the white edges. 
+
     if ~islogical(binary_image)
-        warnMessage  = sprintf("Warning!, Image passed to snip.m isn't logical! this might lead to unexpected behaviour!");
+        warnMessage  = sprintf("Warning!, Image passed to snip.m must be logical!");
         uiwait(warndlg(warnMessage));
     end 
+    
+    % If cropping fails, return the originl binary image without crashing.
     try
         [h, v]              = find(binary_image); 
         top                 = min(h);
